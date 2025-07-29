@@ -1,136 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- SEO Meta Tags -->
+    <!-- SEO Essentials -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A sample webpage demonstrating semantic HTML5 structure with accessibility and SEO considerations">
-    <meta name="keywords" content="HTML5, semantic, accessibility, SEO, web development">
-    <meta name="author" content="Your Name">
+    <meta name="description" content="A fully semantic HTML5 webpage demonstrating proper structure for accessibility and SEO">
+    <meta name="keywords" content="HTML5, semantic web, accessibility, SEO">
+    <title>Semantic Web Page | Accessible & SEO Optimized</title>
     
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Semantic HTML5 Web Page Example">
-    <meta property="og:description" content="Demonstrating proper semantic structure for web pages">
-    <meta property="og:type" content="website">
-    
-    <title>Semantic HTML5 Web Page | Accessible & SEO-Friendly</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
-    <!-- Skip to Main Content Link for Keyboard Users -->
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    
-    <!-- Site Header with ARIA landmark -->
-    <header role="banner" class="site-header">
-        <div class="header-content">
-            <!-- Logo with proper link structure -->
-            <a href="/" aria-label="Home page">
-                <img src="logo.png" alt="Company Logo" class="logo">
-            </a>
-            
-            <!-- Site Title as H1 (SEO best practice) -->
-            <h1 class="site-title">Semantic HTML5 Example</h1>
-            
-            <!-- Site Tagline -->
-            <p class="tagline">Building accessible, SEO-friendly websites</p>
-        </div>
+    <!-- Skip Navigation for Screen Readers -->
+    <nav aria-label="Skip links">
+        <ul>
+            <li><a href="#main-content">Skip to main content</a></li>
+            <li><a href="#site-navigation">Skip to navigation</a></li>
+        </ul>
+    </nav>
+
+    <!-- Site Header -->
+    <header role="banner">
+        <hgroup>
+            <h1>Semantic Web Design</h1>
+            <p>Building accessible, search-friendly websites</p>
+        </hgroup>
+        
+        <figure>
+            <img src="C:\Users\HP\Documents\SEE\Week1\Company.jpeg" alt="Company logo" width="150" height="50">
+        </figure>
     </header>
-    
-    <!-- Primary Navigation with ARIA landmark -->
-    <nav role="navigation" aria-label="Main navigation" class="main-nav">
-        <ul class="nav-list">
+
+    <!-- Primary Navigation -->
+    <nav id="site-navigation" aria-label="Main navigation">
+        <ul>
             <li><a href="/" aria-current="page">Home</a></li>
-            <li><a href="/about">About Us</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="/services">Services</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li><a href="/articles">Articles</a></li>
             <li><a href="/contact">Contact</a></li>
         </ul>
     </nav>
-    
-    <!-- Main Content Area with ARIA landmark -->
-    <main id="main-content" role="main" class="main-content">
-        <!-- Article with semantic structure -->
-        <article class="featured-article">
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+        <!-- Featured Article -->
+        <article>
             <header>
-                <h2>Why Semantic HTML Matters</h2>
-                <p class="article-meta">Published on <time datetime="2023-05-15">May 15, 2023</time> by <span class="author">Jane Doe</span></p>
+                <h2>The Power of Semantic HTML</h2>
+                <p>Published <time datetime="2025-07-29">July 29, 2025</time> by <address rel="author">Joshua Chirchir</address></p>
             </header>
             
-            <section aria-labelledby="section1-heading">
-                <h3 id="section1-heading">Accessibility Benefits</h3>
-                <p>Semantic HTML helps screen readers and other assistive technologies understand the structure of your content, making your website more inclusive.</p>
+            <section aria-labelledby="section1">
+                <h3 id="section1">Accessibility Benefits</h3>
+                <p>Semantic HTML provides meaningful structure that assistive technologies can interpret accurately.</p>
+                
+                <figure>
+                    <img src="accessibility.jpg" alt="Screen reader user navigating a website" width="800" height="450" loading="lazy">
+                    <figcaption>Proper semantics enable better screen reader experiences</figcaption>
+                </figure>
             </section>
             
-            <section aria-labelledby="section2-heading">
-                <h3 id="section2-heading">SEO Advantages</h3>
-                <p>Search engines use semantic elements to better understand your content's hierarchy and relevance, which can improve your search rankings.</p>
+            <section aria-labelledby="section2">
+                <h3 id="section2">SEO Advantages</h3>
+                <p>Search engines prioritize content with clear semantic structure and relationships.</p>
+                <ol>
+                    <li>Improved content understanding</li>
+                    <li>Better ranking for relevant queries</li>
+                    <li>Enhanced featured snippets</li>
+                </ol>
             </section>
-            
-            <figure class="article-image">
-                <img src="semantic-html.jpg" alt="Diagram showing HTML5 semantic elements" loading="lazy">
-                <figcaption>HTML5 semantic elements structure</figcaption>
-            </figure>
         </article>
         
-        <!-- Aside for secondary content -->
-        <aside class="sidebar" aria-label="Related information">
+        <!-- Secondary Content -->
+        <aside aria-label="Related content">
             <section>
-                <h2>Related Articles</h2>
-                <ul class="related-links">
-                    <li><a href="/accessibility-tips">10 Accessibility Tips for Developers</a></li>
-                    <li><a href="/seo-best-practices">SEO Best Practices in 2023</a></li>
-                </ul>
+                <h2>Learn More</h2>
+                <nav aria-label="Related articles">
+                    <ul>
+                        <li><a href="/accessibility-guide">Accessibility Guide</a></li>
+                        <li><a href="/semantic-elements">HTML5 Semantic Elements</a></li>
+                        <li><a href="/seo-best-practices">SEO Best Practices</a></li>
+                    </ul>
+                </nav>
             </section>
         </aside>
     </main>
-    
-    <!-- Footer with ARIA landmark -->
-    <footer role="contentinfo" class="site-footer">
-        <div class="footer-content">
-            <section class="footer-section" aria-labelledby="contact-heading">
-                <h2 id="contact-heading">Contact Us</h2>
-                <address>
-                    <p>123 Web Street<br>
-                    Internet City, IC 12345</p>
-                    <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-                    <p>Phone: <a href="tel:+1234567890">(123) 456-7890</a></p>
-                </address>
-            </section>
-            
-            <section class="footer-section" aria-labelledby="legal-heading">
-                <h2 id="legal-heading">Legal</h2>
-                <ul class="legal-links">
+
+    <!-- Page Footer -->
+    <footer role="contentinfo">
+        <section aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Information</h2>
+            <address>
+                <p>Email: <a href="mailto:joshkem32@gmail.com">joshkem32@gmail.com</a></p>
+                <p>Phone: <a href="tel:+254711205486">+254711205486</a></p>
+                <p>Location: Eldoret Street, Eldoret City</p>
+            </address>
+        </section>
+        
+        <section aria-labelledby="legal-heading">
+            <h2 id="legal-heading">Legal Information</h2>
+            <nav aria-label="Legal links">
+                <ul>
                     <li><a href="/privacy">Privacy Policy</a></li>
                     <li><a href="/terms">Terms of Service</a></li>
                     <li><a href="/cookies">Cookie Policy</a></li>
                 </ul>
-            </section>
-            
-            <section class="footer-section" aria-labelledby="social-heading">
-                <h2 id="social-heading">Follow Us</h2>
-                <ul class="social-links">
-                    <li><a href="https://twitter.com" aria-label="Twitter"><span class="icon-twitter"></span></a></li>
-                    <li><a href="https://facebook.com" aria-label="Facebook"><span class="icon-facebook"></span></a></li>
-                    <li><a href="https://linkedin.com" aria-label="LinkedIn"><span class="icon-linkedin"></span></a></li>
-                </ul>
-            </section>
-        </div>
+            </nav>
+        </section>
         
-        <div class="copyright">
-            <p>&copy; <span id="current-year">2023</span> Semantic HTML Example. All rights reserved.</p>
-        </div>
+        <p><small>&copy; <time datetime="2023">2023</time> Semantic Web Design. All rights reserved.</small></p>
     </footer>
-    
-    <!-- JavaScript -->
-    <script>
-        // Update copyright year automatically
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
